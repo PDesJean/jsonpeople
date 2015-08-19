@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>;
   <![endif]-->
 </head>
 
@@ -27,14 +27,22 @@
     </ul>
   </nav>
 
-  <main class="well col-sm-6">
-    <ul id="people"></ul>
+  <main class="well col-sm-9">
+    <table id="people" class="table-stripped">
+      <tbody id="people"></tbody>
+    </table>
   </main>
 
-  <li id="template" class="hidden list-group-item">
-    {{ person.firstName }} {{ person.lastName }}
-    ({{ person.secret }})
-  </li>
+  <table>
+    <tbody>
+      <tr id="template" class="hidden list-group-item">
+        <td>{{ person.firstName }}</td>
+        <td>{{ person.lastName }}</td>
+        <td><span style="color: #ccc;">{{ person.secret }}</span></td>
+      </tr>
+    </tbody>
+  </table>
+
 
   <script src="js/jquery.min.js"></script>
   <script src="js/scripts.js"></script>
